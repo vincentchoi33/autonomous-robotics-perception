@@ -1,0 +1,9 @@
+opencv-python>=4.5.0
+opencv-contrib-python>=4.5.0
+numpy<2.0.0
+scikit-learn>=1.0.0
+matplotlib>=3.5.0
+rclpy>=0.10.0
+sensor-msgs>=2.2.0
+cv-bridge>=3.0.0
+image-transport>=2.3.0 
