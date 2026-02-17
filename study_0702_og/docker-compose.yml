@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  ros2_image_processor:
+    build: .
+    container_name: ros2_image_processor
+    volumes:
+      - ./rosbag2_2025_06_16-15_16_29:/ros2_ws/rosbag2_2025_06_16-15_16_29:ro
+      - ./visualization_output:/ros2_ws/visualization_output:rw
+      - ./homography_matrix.npy:/ros2_ws/homography_matrix.npy:ro
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+    environment:
+      - DISPLAY=${DISPLAY}
+      - QT_X11_NO_MITSHM=1
+    network_mode: host
+    stdin_open: true
+    tty: true
+    command: bash -c "source /opt/ros/humble/setup.bash && source /ros2_ws/install/setup.bash && python3 /ros2_ws/src/ros2_image_processor/ros2_image_processor/image_processor_node.py" 

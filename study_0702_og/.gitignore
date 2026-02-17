@@ -1,0 +1,47 @@
+# ROS 2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.dockerignore
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Large files (bag files should be downloaded separately)
+*.bag
+*.db3
+*.mcap
+
+# Output images/videos
+output/
+results/
+*.mp4
+*.avi
+*.mov 
